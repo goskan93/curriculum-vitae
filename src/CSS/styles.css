@@ -1,0 +1,8 @@
+.app {
+  flex-grow: 1;
+  padding: 1rem;
+}
+
+.cv-header {
+  padding: 3rem;
+}
