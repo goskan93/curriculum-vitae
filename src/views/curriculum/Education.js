@@ -1,7 +1,7 @@
 import React from "react";
 import Grid from "@material-ui/core/Grid";
 import SchoolIcon from "@material-ui/icons/School";
-import { Section } from "../components/index";
+import { Section } from "../../components/index";
 import { connect } from "react-redux";
 
 function Education(props) {

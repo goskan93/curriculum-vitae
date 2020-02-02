@@ -1,8 +1,8 @@
 import React from "react";
 import Paper from "@material-ui/core/Paper";
-import BackgroundImage from "../components/backgroundImage";
+import BackgroundImage from "../../components/backgroundImage";
 import { Grid } from "@material-ui/core";
-import { Header, Education, Experience } from "./index";
+import { Header, Education, Experience } from "../index";
 
 //TODO: remove opacity from child
 function Curriculum(props) {
