@@ -1,6 +1,6 @@
 import React from "react";
 import Grid from "@material-ui/core/Grid";
-import Curriculum from "./index";
+import { Curriculum } from "./index";
 function Home(props) {
   return (
     <Grid container className="app" spacing={8}>

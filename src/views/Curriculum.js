@@ -2,8 +2,7 @@ import React from "react";
 import Paper from "@material-ui/core/Paper";
 import BackgroundImage from "../components/backgroundImage";
 import { Grid } from "@material-ui/core";
-import Header from "./Header";
-import Education from "./curriculum/Education";
+import { Header, Education } from "./index";
 
 //TODO: remove opacity from child
 function Curriculum(props) {
