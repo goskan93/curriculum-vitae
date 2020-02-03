@@ -13,7 +13,6 @@ function Skills(props) {
           title="SKILLS"
           listInfo={skills}
           icon={<CodeIcon />}
-          gridSize={6}
         />
       </Grid>
     </Grid>

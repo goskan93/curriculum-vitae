@@ -1,4 +1,5 @@
 import React from "react";
+import { makeStyles } from '@material-ui/core/styles';
 import PropTypes from "prop-types";
 import List from "@material-ui/core/List";
 import ListItemIcon from "@material-ui/core/ListItemIcon";
@@ -8,13 +9,22 @@ import Divider from "@material-ui/core/Divider";
 import Brightness1Icon from "@material-ui/icons/Brightness1";
 import { Grid } from "@material-ui/core";
 
+
+const useStyles = makeStyles({
+  root:{
+    fontSize: "2rem"
+  }
+
+},{name: 'MuiSvgIcon'});
+
 function Section(props) {
+  const classes = useStyles();
   const { title, listInfo, icon, gridSize } = props;
 
   return (
     <List>
       <ListItem>
-        <ListItemIcon>{icon}</ListItemIcon>
+        <ListItemIcon >{icon}</ListItemIcon>
         <ListItemText primary={title} />
       </ListItem>
       <Divider variant="middle" />
@@ -41,8 +51,6 @@ function Section(props) {
 
 Section.propTypes = {
   gridSize: PropTypes.number,
-  // primaryText: PropTypes.string,
-  // secondaryText: PropTypes.string,
   listInfo: PropTypes.arrayOf(PropTypes.object),
   title: PropTypes.string,
   icon: PropTypes.object
