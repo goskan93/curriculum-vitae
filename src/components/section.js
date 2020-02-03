@@ -10,12 +10,20 @@ import Brightness1Icon from "@material-ui/icons/Brightness1";
 import { Grid } from "@material-ui/core";
 
 
+// const useStyles = makeStyles({
+//   root:{
+//     fontSize: "1.25rem"
+//   }
+
+// },{name: 'MuiSvgIcon'});
+
 const useStyles = makeStyles({
   root:{
-    fontSize: "2rem"
+    paddingTop: '0.1rem',
+    paddingBottom: '0.25rem'
   }
 
-},{name: 'MuiSvgIcon'});
+},{name: 'MuiListItem'});
 
 function Section(props) {
   const classes = useStyles();
