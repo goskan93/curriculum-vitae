@@ -49,11 +49,13 @@ const useStylesDivider = makeStyles({
 
 const useStyleListText = makeStyles({
   primary: {
-    fontSize: "1rem"
+    fontSize: "1rem",
   },
   secondary:{
     fontSize: "0.75rem"
-
+  },
+  root:{
+    margin: "0.2rem"
   }
 }, {name: 'MuiListItemText'})
 
