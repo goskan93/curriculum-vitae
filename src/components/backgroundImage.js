@@ -11,8 +11,7 @@ function BackgroundImage(props) {
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
         backgroundColor: "#BF214B",
-        minHeight: 300,
-        // opacity: 0.5
+        minHeight: 200,
       }}
     >
       {props.children}

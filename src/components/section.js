@@ -11,7 +11,7 @@ import { Grid } from "@material-ui/core";
 
 const ListTitle = withStyles({
   root:{
-    "& .MuiListItemText-primary": { fontSize: "1.25em" }
+    "& .MuiListItemText-primary": { fontSize: "1em" }
   }
 })(ListItemText);
 
@@ -49,13 +49,13 @@ const useStylesDivider = makeStyles({
 
 const useStyleListText = makeStyles({
   primary: {
-    fontSize: "1rem",
+    fontSize: "0.75rem",
   },
   secondary:{
-    fontSize: "0.75rem"
+    fontSize: "0.5rem"
   },
   root:{
-    margin: "0.2rem"
+    margin: "0"
   }
 }, {name: 'MuiListItemText'})
 

@@ -19,7 +19,7 @@ function Home(props) {
         <button onClick={createPdf}>Create PDF</button>
       </Grid>
       <Grid item xs={12} md={8} >
-        <Paper elevation={5} paperSize="" style={{ height: "100%" }} ref={bodyRef}>
+        <Paper elevation={5} style={{height:792, width:612, padding:'none', margin:'auto'}} ref={bodyRef}>
           <Curriculum/>
         </Paper>
       </Grid>

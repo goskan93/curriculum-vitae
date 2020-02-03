@@ -6,12 +6,12 @@ import { Grid, Typography } from "@material-ui/core";
 function Header(props) {
   const { name, email, phone } = props
   return (
-    <Grid container>
+    <Grid container direction="row" justify="center" alignItems="center">
       <Grid item xs={6}>
         dasd
       </Grid>
       <Grid item xs={6}>
-        <Grid container direction="column" justify="center" alignItems="center" style={{minHeight:300}}>
+        <Grid container direction="column" justify="center" alignItems="center">
           <Grid item xs={12}>
             <Typography style={{color:'white', textAlign:'center', fontSize:'2rem'}}>{name}</Typography>
             <Typography style={{color:'white', textAlign:'center', fontSize:'1rem'}}>email: {email}</Typography>
