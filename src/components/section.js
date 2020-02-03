@@ -83,7 +83,7 @@ function Section(props) {
                 </SmallerListItemIcon>
                 <ListItemText
                   primary={item.primaryText}
-                  secondary={item.secondaryText}
+                  secondary={item.secondaryText ? item.secondaryText : ""}
                 />
               </ListItem>
             </Grid>

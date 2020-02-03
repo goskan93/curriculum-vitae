@@ -71,18 +71,14 @@ export const languages = [
 export const skills = [
   {
     primaryText: "ASP.NET MVC, C#, HTML, CSS, JavaScript",
-    secondaryText: ""
   },
   {
-    primaryText: "Python, Power BI, MS Excel",
-    secondaryText: ""
+    primaryText: "Python, Power BI, VBA, MSSQL, Latex",
   },
   {
-    primaryText: "MSSQL, VBA, LaTex",
-    secondaryText: ""
+    primaryText: "React.js, React Native, Redux, Expo",
   },
   {
     primaryText: "GIT, Azure Devops",
-    secondaryText: ""
   }
 ];

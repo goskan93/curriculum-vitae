@@ -3,7 +3,7 @@ import Grid from "@material-ui/core/Grid";
 import { Curriculum } from "./index";
 function Home(props) {
   return (
-    <Grid container className="app" spacing={8}>
+    <Grid container className="app">
       <Grid item xs={12} md={4}>
         form
       </Grid>

@@ -1,5 +1,5 @@
 import React from "react";
-import backgroundImage from "../images/background.jpg";
+import backgroundImage from "../images/background2.png";
 
 function BackgroundImage(props) {
   return (
@@ -12,7 +12,7 @@ function BackgroundImage(props) {
         backgroundRepeat: "no-repeat",
         backgroundColor: "#BF214B",
         minHeight: 300,
-        opacity: 0.5
+        // opacity: 0.5
       }}
     >
       {props.children}
