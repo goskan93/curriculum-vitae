@@ -1,4 +1,5 @@
 import React from "react";
+import { connect } from "react-redux";
 import Paper from "@material-ui/core/Paper";
 import BackgroundImage from "../../components/backgroundImage";
 import { Grid } from "@material-ui/core";
@@ -7,10 +8,12 @@ import BusinessCenterIcon from "@material-ui/icons/BusinessCenter";
 import LanguageIcon from "@material-ui/icons/Language";
 import CodeIcon from "@material-ui/icons/Code";
 
-import { Header, Education, Experience, Languages, Skills } from "../index";
+import { Header } from "../index";
+import { Section } from "../../components/index";
 
 //TODO: remove opacity from child
 function Curriculum(props) {
+  const { experience, education, languages, skills } = props;
   return (
     <Paper elevation={5} style={{ minHeight: 1000 }}>
       <Grid container direction="column" spacing={0}>
