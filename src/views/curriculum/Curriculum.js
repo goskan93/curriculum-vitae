@@ -1,8 +1,8 @@
 import React from "react";
 import Paper from "@material-ui/core/Paper";
-import BackgroundImage from "../components/backgroundImage";
+import BackgroundImage from "../../components/backgroundImage";
 import { Grid } from "@material-ui/core";
-import { Header, Education } from "./index";
+import { Header, Education, Experience, Languages, Skills } from "../index";
 
 //TODO: remove opacity from child
 function Curriculum(props) {
@@ -16,11 +16,13 @@ function Curriculum(props) {
         </Grid>
         <Grid item xs={12}>
           <Grid container>
-            <Grid item xs={6} style={{ padding: "1rem" }}>
+            <Grid item xs={6} style={{ padding: "1rem 0" }}>
               <Education />
+              <Languages />
+              <Skills />
             </Grid>
-            <Grid item xs={6} style={{ padding: "1rem" }}>
-              dasd
+            <Grid item xs={6} style={{ padding: "1rem 0" }}>
+              <Experience />
             </Grid>
           </Grid>
         </Grid>
