@@ -8,7 +8,8 @@ import {
   phone,
   skills,
   github,
-  linkedin
+  linkedin,
+  other
 } from "../../utils/index";
 
 const formActionTypes = {
@@ -27,7 +28,8 @@ const initialState = {
   languages: languages,
   skills: skills,
   github: github,
-  linkedin: linkedin
+  linkedin: linkedin,
+  other: other
 };
 
 const formReducer = handleActions(

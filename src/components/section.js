@@ -30,7 +30,7 @@ const useStyleListText = makeStyles({
 const useStylesListItem = makeStyles({
   root:{
     paddingTop: '0.1rem',
-    paddingBottom: '0.1rem'
+    paddingBottom: '0'
   }
 },{name: 'MuiListItem'});
 

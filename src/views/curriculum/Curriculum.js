@@ -5,7 +5,7 @@ import { Grid } from "@material-ui/core";
 import { Header } from "../index";
 import { Section, BackgroundImage } from "../../components/index";
 
-import {experienceIcon, educationIcon, languagesIcon, skillsIcon } from "../../images/index";
+import {experienceIcon, educationIcon, languagesIcon, skillsIcon, otherIcon } from "../../images/index";
 
 
 //TODO: remove opacity from child
@@ -33,6 +33,12 @@ function Curriculum(props) {
       name:"skills",
       iconImg: skillsIcon,
       itemSize: 7,
+      otherProps: {}
+    },
+    {
+      name:"other",
+      iconImg: otherIcon,
+      itemSize: 12,
       otherProps: {}
     }
   ]
@@ -66,7 +72,8 @@ function mapStateToProps({ form }, _) {
     education: form.education,
     experience: form.experience,
     languages: form.languages,
-    skills: form.skills
+    skills: form.skills,
+    other: form.other
   };
 }
 export default connect(mapStateToProps)(Curriculum);
