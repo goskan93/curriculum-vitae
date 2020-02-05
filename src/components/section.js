@@ -34,6 +34,13 @@ const useStylesListItem = makeStyles({
   }
 },{name: 'MuiListItem'});
 
+const useStylesList = makeStyles({
+  root:{
+    paddingTop: '0.25rem',
+    paddingBottom: '0'
+  }
+},{name: 'MuiList'});
+
 const ListItemIconHeader = withStyles({
   root: {
     minWidth: "2.25rem",
@@ -65,6 +72,7 @@ function Section(props) {
   useStylesListIcon();
   useStylesDivider();
   useStyleListText();
+  useStylesList();
   const { title, listInfo, iconImg, gridSize } = props;
 
   return (
