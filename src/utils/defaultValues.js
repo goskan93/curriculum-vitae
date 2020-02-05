@@ -74,6 +74,22 @@ export const skills = [
     primaryText: "React.js, React Native, Redux, Expo",
   },
   {
-    primaryText: "GIT, Azure Devops",
+    primaryText: "GIT, Azure DevOps",
   }
 ];
+
+export const others = [
+  {
+    primaryText: "10.2015 – 06.2016: President of Scientific Circle of Financial Engineering",
+
+  },
+  {
+    primaryText: "10.2015 – 06.2016: Main Coordinator of Polish Nationwide Mathematical Conference OMatKo!!!"
+  },
+  {
+    primaryText: "Rector’s scholarship in regard to high academic results (academic years 2012/2013 and 2015/2016)"
+  },
+  {
+    primaryText: "Distinction from the Rector of the University of Science and Technology in Wroclaw and from the Dean of the Faculty of Pure and Applied Mathematics in regard to the exceptional social and student’s activity (academic year 2016/2017)"
+  },
+]
