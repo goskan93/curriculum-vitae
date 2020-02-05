@@ -6,7 +6,9 @@ import {
   name,
   email,
   phone,
-  skills
+  skills,
+  github,
+  linkedin
 } from "../../utils/index";
 
 const formActionTypes = {
@@ -23,7 +25,9 @@ const initialState = {
   education: education,
   experience: experience,
   languages: languages,
-  skills: skills
+  skills: skills,
+  github: github,
+  linkedin: linkedin
 };
 
 const formReducer = handleActions(
