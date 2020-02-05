@@ -79,7 +79,7 @@ function Section(props) {
     <List>
       <ListItem>
         <ListItemIconHeader >
-          <img src={iconImg} width="24px" height="24px"/>
+          <img src={iconImg} width="24px" height="24px" alt="icon"/>
         </ListItemIconHeader>
         <ListTitle primary={title} />
       </ListItem>
@@ -87,10 +87,10 @@ function Section(props) {
       <Grid container>
         {listInfo.map((item, index) => {
           return (
-            <Grid item xs={gridSize}>
+            <Grid item xs={gridSize} key={index}>
               <ListItem key={index}>
                 <ListItemIconDot>
-                  <img src={dotIcon} width="8px" height="8px"/>
+                  <img src={dotIcon} width="8px" height="8px" alt="dot"/>
                 </ListItemIconDot>
                 <ListItemText
                   primary={item.primaryText}

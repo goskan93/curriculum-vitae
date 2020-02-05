@@ -52,14 +52,18 @@ function Curriculum(props) {
       <Grid item xs={12}>
         <Grid container>
           {sections.map((item, index) => {return (
-            <Grid item xs={item.itemSize} key={index}>
-              <Section 
-                title={item.name.toUpperCase()} 
-                listInfo={props[item.name]} 
-                iconImg={item.iconImg} 
-                {...item.otherProps}
-              />
-            </Grid>
+            <React.Fragment key={index}>
+              {props[item.name].length > 0 &&
+                <Grid item xs={item.itemSize} >
+                  <Section 
+                    title={item.name.toUpperCase()} 
+                    listInfo={props[item.name]} 
+                    iconImg={item.iconImg} 
+                    {...item.otherProps}
+                  />
+                </Grid>
+              }
+            </React.Fragment>
           )})}
         </Grid>
       </Grid>

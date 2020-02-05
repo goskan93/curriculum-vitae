@@ -3,6 +3,7 @@ export const email = "natalia.goska@gmail.com";
 export const phone = "+55 92566 48492";
 export const github = "https://github.com/goskan93";
 export const linkedin = "https://github.com/goskan93";
+export const website = "https://github.com/goskan93";
 
 export const education = [
   {

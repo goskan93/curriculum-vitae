@@ -8,5 +8,6 @@ import { skills } from "./defaultValues";
 import { github } from "./defaultValues";
 import { linkedin } from "./defaultValues";
 import { other } from "./defaultValues";
+import { website } from "./defaultValues";
 
-export { languages, education, experience, name, phone, email, skills, github, linkedin, other};
+export { languages, education, experience, name, phone, email, skills, github, linkedin, other, website};

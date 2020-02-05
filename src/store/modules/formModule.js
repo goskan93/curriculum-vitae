@@ -9,6 +9,7 @@ import {
   skills,
   github,
   linkedin,
+  website,
   other
 } from "../../utils/index";
 
@@ -23,12 +24,13 @@ const initialState = {
   name: name,
   email: email,
   phone: phone,
+  website: website,
+  linkedin: linkedin,
+  github: github,
   education: education,
   experience: experience,
   languages: languages,
   skills: skills,
-  github: github,
-  linkedin: linkedin,
   other: other
 };
 

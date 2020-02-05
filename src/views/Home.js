@@ -1,6 +1,6 @@
 import React,  {useRef } from "react";
 import Grid from "@material-ui/core/Grid";
-import { Curriculum } from "./index";
+import { Curriculum, Form } from "./index";
 import { savePDF } from '@progress/kendo-react-pdf';
 import Paper from "@material-ui/core/Paper";
 
@@ -15,10 +15,15 @@ function Home(props) {
 
   return (
     <Grid container className="app">
-      <Grid item xs={12} md={4}>
-        <button onClick={createPdf}>Create PDF</button>
+      <Grid item xs={12} md={5}>
+        <Grid container spacing={1}>
+          <Form/>
+          <Grid item xs={12} > 
+            <button onClick={createPdf}>Create PDF</button>
+          </Grid >
+        </Grid>
       </Grid>
-      <Grid item xs={12} md={8} >
+      <Grid item xs={12} md={7} >
         <Paper elevation={5} style={{height:792, width:612, padding:'none', margin:'auto'}} ref={bodyRef}>
           <Curriculum/>
         </Paper>
