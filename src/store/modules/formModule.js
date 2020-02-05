@@ -14,10 +14,10 @@ import {
 } from "../../utils/index";
 
 const formActionTypes = {
-  UPDATE: "UPDATE"
+  UPDATE_PERSONAL_INFO: "UPDATE_PERSONAL_INFO"
 };
 
-const { update } = createActions(formActionTypes.UPDATE);
+const { updatePersonalInfo } = createActions(formActionTypes.UPDATE_PERSONAL_INFO);
 
 const initialState = {
   // language: 1,
@@ -36,7 +36,7 @@ const initialState = {
 
 const formReducer = handleActions(
   {
-    [formActionTypes.UPDATE]: (state, action) => {
+    [formActionTypes.UPDATE_PERSONAL_INFO]: (state, action) => {
       const { field, value } = action.payload;
       return { ...state, [field]: value };
     }
@@ -44,4 +44,4 @@ const formReducer = handleActions(
   initialState
 );
 
-export { formReducer, update };
+export { formReducer, updatePersonalInfo };
