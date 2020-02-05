@@ -25,27 +25,22 @@ export const experience = [
     primaryText:
       "09.2018 - present: System Developer, Agrometrika, Vinhedo, Brazil",
     secondaryText: `Develop the system for credit analysis for agrobusiness (ASP.NET MVC, C#, SQL, HTML, CSS,
-      JavaScript) , preparing data visualizations and machine learning model used for business analysis,
+      JavaScript), preparing data visualizations and machine learning model used for business analysis,
       (Power BI, Python), building mobile application integrated with the system (React Native, Expo,
       Redux)`
   },
   {
     primaryText:
-      "04.2017 – 12.2017:  Junior SAP PO Consultant, AtosGDBC, Wroclaw, Poland",
-    secondaryText: `Doing the transports to other environments and preparing transport’s documentations, doing re-
-      gression tests, contact with the client, create the weekly and monthly report based on SNow, work
-      with international team`
+      "04.2017 – 12.2017: Junior SAP PO Consultant, AtosGDBC, Wroclaw, Poland",
+    secondaryText: `Doing the transports to other environments and preparing transport’s documentations, doing regression tests,
+      contact with the client, create the weekly and monthly report based on SNow, work with international team`
   },
   {
     primaryText:
-      "06.2013 – 12.2014:  Customer Service/Project Coordinator, Manus Foundation, Wroclaw, Poland",
-    secondaryText: `Help during the projects such as:
-      - Student Camp 2014
-      - Action of selling insurances for students
-      - Fam trip Forum of Active Students 2014
-      Contact with participants, settling the formal issues, prepare materials for participants, controlling
-      the budget, taking care of the promotion in social media, maintaining the Foundation’s good name,
-      keep contact with the student’s organizations`
+      "06.2013 – 12.2014: Customer Service/Project Coordinator, Manus Foundation, Wroclaw, Poland",
+    secondaryText: `Help during the students projects such as Student Camp 2014, Action of selling insurances for students, Fam trip for Active Students 2014.
+      Contact with participants, settling the formal issues, prepare materials for participants, controlling the budget, 
+      taking care of the promotion in social media, maintaining the Foundation’s good name, keep contact with the student’s organizations`
   }
 ];
 
