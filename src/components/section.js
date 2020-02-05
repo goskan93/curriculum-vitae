@@ -6,27 +6,26 @@ import ListItemIcon from "@material-ui/core/ListItemIcon";
 import ListItem from "@material-ui/core/ListItem";
 import ListItemText from "@material-ui/core/ListItemText";
 import Divider from "@material-ui/core/Divider";
-import Brightness1Icon from "@material-ui/icons/Brightness1";
 import { Grid } from "@material-ui/core";
+import { dotIcon } from "../images/index";
 
 const ListTitle = withStyles({
   root:{
-    "& .MuiListItemText-primary": { fontSize: "1em" }
+    "& .MuiListItemText-primary": { fontSize: "1em", fontWeight:"bold" }
   }
 })(ListItemText);
 
-const BiggerListItemIcon = withStyles({
-  root: {    
-    "& .MuiSvgIcon-root": { fontSize: "2em" }
+const useStyleListText = makeStyles({
+  primary: {
+    fontSize: "0.75rem",
+  },
+  secondary:{
+    fontSize: "0.6rem"
+  },
+  root:{
+    margin: "0"
   }
-})(ListItemIcon);
-
-const SmallerListItemIcon = withStyles({
-  root: {
-    minWidth: "1.5rem",
-    "& .MuiSvgIcon-root": { fontSize: "0.75em" }
-  }
-})(ListItemIcon);
+}, {name: 'MuiListItemText'})
 
 const useStylesListItem = makeStyles({
   root:{
@@ -34,6 +33,18 @@ const useStylesListItem = makeStyles({
     paddingBottom: '0.1rem'
   }
 },{name: 'MuiListItem'});
+
+const ListItemIconHeader = withStyles({
+  root: {
+    minWidth: "2.25rem",
+  }
+})(ListItemIcon);
+
+const ListItemIconDot = withStyles({
+  root: {
+    minWidth: "1.25rem",
+  }
+})(ListItemIcon);
 
 const useStylesListIcon = makeStyles({
   root:{
@@ -47,29 +58,21 @@ const useStylesDivider = makeStyles({
   }
 }, {name: 'MuiDivider'})
 
-const useStyleListText = makeStyles({
-  primary: {
-    fontSize: "0.75rem",
-  },
-  secondary:{
-    fontSize: "0.5rem"
-  },
-  root:{
-    margin: "0"
-  }
-}, {name: 'MuiListItemText'})
+
 
 function Section(props) {
   useStylesListItem();
   useStylesListIcon();
   useStylesDivider();
   useStyleListText();
-  const { title, listInfo, icon, gridSize } = props;
+  const { title, listInfo, iconImg, gridSize } = props;
 
   return (
     <List>
       <ListItem>
-        <BiggerListItemIcon >{icon}</BiggerListItemIcon>
+        <ListItemIconHeader >
+          <img src={iconImg} width="24px" height="24px"/>
+        </ListItemIconHeader>
         <ListTitle primary={title} />
       </ListItem>
       <Divider variant="middle" />
@@ -78,9 +81,9 @@ function Section(props) {
           return (
             <Grid item xs={gridSize}>
               <ListItem key={index}>
-                <SmallerListItemIcon>
-                  <Brightness1Icon fontSize="small" />
-                </SmallerListItemIcon>
+                <ListItemIconDot>
+                  <img src={dotIcon} width="8px" height="8px"/>
+                </ListItemIconDot>
                 <ListItemText
                   primary={item.primaryText}
                   secondary={item.secondaryText ? item.secondaryText : ""}

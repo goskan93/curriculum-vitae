@@ -1,19 +1,41 @@
 import React from "react";
 import { connect } from "react-redux";
-
-import {BackgroundImage} from "../../components/index";
 import { Grid } from "@material-ui/core";
-import SchoolIcon from "@material-ui/icons/School";
-import BusinessCenterIcon from "@material-ui/icons/BusinessCenter";
-import LanguageIcon from "@material-ui/icons/Language";
-import CodeIcon from "@material-ui/icons/Code";
 
 import { Header } from "../index";
-import { Section } from "../../components/index";
+import { Section, BackgroundImage } from "../../components/index";
+
+import {experienceIcon, educationIcon, languagesIcon, skillsIcon } from "../../images/index";
+
 
 //TODO: remove opacity from child
 function Curriculum(props) {
-  const { experience, education, languages, skills } = props;
+  const sections = [ 
+    {
+      name:"education",
+      iconImg: educationIcon,
+      itemSize: 12,
+      otherProps: {}
+    },   
+    {
+      name:"experience",
+      iconImg: experienceIcon,
+      itemSize: 12,
+      otherProps: {}
+    }, 
+    {
+      name:"languages",
+      iconImg: languagesIcon,
+      itemSize: 5,
+      otherProps: {gridSize:6}
+    }, 
+    {
+      name:"skills",
+      iconImg: skillsIcon,
+      itemSize: 7,
+      otherProps: {}
+    }
+  ]
   return (
     <Grid container direction="column" >
       <Grid item xs={12}>
@@ -23,18 +45,16 @@ function Curriculum(props) {
       </Grid>
       <Grid item xs={12}>
         <Grid container>
-          <Grid item xs={12}>
-            <Section title="EDUCATION" listInfo={education} icon={<SchoolIcon />} />
-          </Grid>
-          <Grid item xs={12} >
-            <Section title="EXPERIENCE" listInfo={experience} icon={<BusinessCenterIcon />}/>
-          </Grid>
-          <Grid item xs={5}>
-            <Section title="LANGUAGES" listInfo={languages} icon={<LanguageIcon />} gridSize={6}/>
-          </Grid>
-          <Grid item xs={7}>
-            <Section title="SKILLS" listInfo={skills} icon={<CodeIcon />} />
-          </Grid>
+          {sections.map((item, index) => {return (
+            <Grid item xs={item.itemSize} key={index}>
+              <Section 
+                title={item.name.toUpperCase()} 
+                listInfo={props[item.name]} 
+                iconImg={item.iconImg} 
+                {...item.otherProps}
+              />
+            </Grid>
+          )})}
         </Grid>
       </Grid>
     </Grid>
