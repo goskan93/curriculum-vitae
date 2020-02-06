@@ -53,11 +53,11 @@ function Curriculum(props) {
         <Grid container>
           {sections.map((item, index) => {return (
             <React.Fragment key={index}>
-              {props[item.name].length > 0 &&
+              {props.form[item.name].length > 0 &&
                 <Grid item xs={item.itemSize} >
                   <Section 
                     title={item.name.toUpperCase()} 
-                    listInfo={props[item.name]} 
+                    listInfo={props.form[item.name]} 
                     iconImg={item.iconImg} 
                     {...item.otherProps}
                   />
@@ -73,11 +73,7 @@ function Curriculum(props) {
 
 function mapStateToProps({ form }, _) {
   return {
-    education: form.education,
-    experience: form.experience,
-    languages: form.languages,
-    skills: form.skills,
-    other: form.other
+    form:form
   };
 }
 export default connect(mapStateToProps)(Curriculum);

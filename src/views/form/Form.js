@@ -1,7 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import { TextInput, Expanded } from "../../components/index";
-import { updatePersonalInfo, updateSection, addElemSection } from "../../store/modules/formModule";
+import { updatePersonalInfo, updateSection, addElemSection, deleteElemSection } from "../../store/modules/formModule";
 
 //TODO: remove opacity from child
 function Form(props) {
@@ -17,6 +17,9 @@ function Form(props) {
   const onAddElementSection = fieldName => {
     props.dispatch(addElemSection({field: fieldName }));
   };
+  const onDeleteElementSection = fieldName => index => {
+    props.dispatch(deleteElemSection({field: fieldName, index: index }));
+  };
 
   return (
     <>
@@ -26,7 +29,36 @@ function Form(props) {
       <TextInput label="GitHub" value={form.github} xs={6} onChange={onChangePersonalInfo('github')}/>
       <TextInput label="Linkedin" value={form.linkedin} xs={6} onChange={onChangePersonalInfo('linkedin')}/>
       <TextInput label="Website" value={form.website} xs={6} onChange={onChangePersonalInfo('website')}/>
-      <Expanded title="Add education" list={form.education} onChange={onChangeSectionInfo('education')} onAdd={() => onAddElementSection('education')}/>
+      <Expanded 
+        title="Add education" list={form.education} 
+        onChange={onChangeSectionInfo('education')} 
+        onAdd={() => onAddElementSection('education')} 
+        onDelete={onDeleteElementSection('education') }
+      />
+      <Expanded 
+        title="Add experience" list={form.experience} 
+        onChange={onChangeSectionInfo('experience')} 
+        onAdd={() => onAddElementSection('experience')} 
+        onDelete={onDeleteElementSection('experience') }
+      />
+      <Expanded 
+        title="Add languages" list={form.languages} 
+        onChange={onChangeSectionInfo('languages')} 
+        onAdd={() => onAddElementSection('languages')} 
+        onDelete={onDeleteElementSection('languages') }
+      />
+      <Expanded 
+        title="Add skills" list={form.skills} 
+        onChange={onChangeSectionInfo('skills')} 
+        onAdd={() => onAddElementSection('skills')} 
+        onDelete={onDeleteElementSection('skills') }
+      />
+      <Expanded 
+        title="Add other" list={form.other} 
+        onChange={onChangeSectionInfo('other')} 
+        onAdd={() => onAddElementSection('other')} 
+        onDelete={onDeleteElementSection('other') }
+      />
     </>
   );
 }

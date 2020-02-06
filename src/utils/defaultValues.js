@@ -84,7 +84,6 @@ export const skills = [
 export const other = [
   {
     primaryText: "10.2015 – 06.2016: President of Scientific Circle of Financial Engineering",
-
   },
   {
     primaryText: "10.2015 – 06.2016: Main Coordinator of Polish Nationwide Mathematical Conference OMatKo!!!"

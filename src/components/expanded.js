@@ -9,12 +9,7 @@ import Paper from '@material-ui/core/Paper';
 import { TextInput } from './index'
 
 function Expanded(props) {
-  const {onChange, onAdd, title, list } = props
-
-  // const onDeleteElement = value => {
-  //   changeCount(count > 0 && count - 1)
-  //   //delete from store
-  // }
+  const {onChange, onAdd, onDelete, title, list } = props
 
   return (
     <Grid item xs={12}>
@@ -29,15 +24,13 @@ function Expanded(props) {
         <ExpansionPanelDetails>
             <Grid container spacing={1} direction="row">
               <Grid item xs={12}>
-                <button onChange={onAdd}>
-                  Add
-                </button>
+                <button onClick={() => onAdd()}>Add</button>
               </Grid>
               {list.map((item,i) => 
                 <Paper style={{width:"100%", margin:"0.25rem", padding:"0.25rem"}} variant="outlined" key={i}>
                   <TextInput label="Main Text" value={item.primaryText} xs={12} onChange={(value) => onChange(value, i, 'primaryText')}/>
                   <TextInput label="Addicional Text" value={item.secondaryText} xs={12} onChange={(value) => onChange(value, i, 'secondaryText')} multiline={true}/>  
-                  <button onChange={() => null}>Delete</button>              
+                  <button onClick={() => onDelete(i)}>Delete</button>              
                 </Paper>
               )} 
             </Grid>           

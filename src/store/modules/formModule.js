@@ -16,14 +16,16 @@ import {
 const formActionTypes = {
   UPDATE_PERSONAL_INFO: "UPDATE_PERSONAL_INFO",
   UPDATE_SECTION: "UPDATE_SECTION",
-  ADD_ELEM_SECTION: "ADD_ELEM_SECTION"
+  ADD_ELEM_SECTION: "ADD_ELEM_SECTION",
+  DELETE_ELEM_SECTION: "DELETE_ELEM_SECTION"
 };
 
-const { updatePersonalInfo, updateSection, addElemSection } = createActions(
+const { updatePersonalInfo, updateSection, addElemSection, deleteElemSection } = createActions(
   formActionTypes.UPDATE_PERSONAL_INFO, 
   formActionTypes.UPDATE_SECTION,
-  formActionTypes.ADD_ELEM_SECTION
-  );
+  formActionTypes.ADD_ELEM_SECTION,
+  formActionTypes.DELETE_ELEM_SECTION
+);
 
 const initialState = {
   // language: 1,
@@ -59,9 +61,15 @@ const formReducer = handleActions(
       const getSection = state[field]
       const updateSection = [...getSection, {primaryText:"", secondaryText: ""}]
       return { ...state, [field]: updateSection };
+    },
+    [formActionTypes.DELETE_ELEM_SECTION]: (state, action) => {
+      const { field, index } = action.payload;
+      const getSection = state[field]
+      const updateSection = [...getSection.slice(0,index), ...getSection.slice(index+1)]
+      return { ...state, [field]: updateSection };
     }
   },
   initialState
 );
 
-export { formReducer, updatePersonalInfo, updateSection, addElemSection };
+export { formReducer, updatePersonalInfo, updateSection, addElemSection, deleteElemSection };
