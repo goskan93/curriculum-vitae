@@ -5,14 +5,14 @@ import {githubIcon, linkedinIcon, websiteIcon, foto} from "../../images/index"
 
 //TODO: remove opacity from child
 function Header(props) {
-  const { name, email, phone, github, linkedin, website } = props
+  const { name, email, phone, github, linkedin, website, imagePreviewUrl } = props
   const xs = 12 / (Number(github.length > 0) + Number(linkedin.length > 0) + Number(website.length > 0)) ;
   
   return (
     <Grid container direction="row" justify="center" alignItems="center" style={{minHeight:"150px"}} >
       <Grid item xs={5} style={{margin:"auto"}}>
         <Grid container justify="center">
-          <img alt="Foto" src={foto}  style={{width:"120px", height:"120px", borderRadius: "70%"}}/>
+          <img alt="Foto" src={imagePreviewUrl ? imagePreviewUrl : foto}  style={{width:"120px", height:"120px", borderRadius: "70%"}}/>
         </Grid>
       </Grid>
       <Grid item xs={1}> 
@@ -64,7 +64,8 @@ function mapStateToProps({ form }, _) {
     phone: form.phone,
     linkedin: form.linkedin,
     github: form.github,
-    website: form.website
+    website: form.website,
+    imagePreviewUrl: form.imagePreviewUrl
   };
 }
 export default connect(mapStateToProps)(Header);

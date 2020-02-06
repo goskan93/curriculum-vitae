@@ -39,7 +39,8 @@ const initialState = {
   experience: experience,
   languages: languages,
   skills: skills,
-  other: other
+  other: other,
+  imagePreviewUrl: null
 };
 
 const formReducer = handleActions(
