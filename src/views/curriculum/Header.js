@@ -19,21 +19,21 @@ function Header(props) {
         <Grid container direction="column" justify="center" alignItems="center" alignContent="center" > 
           {github &&
             <Grid item xs={xs} style={{paddingTop:"0.5rem", paddingBottom: "0.5rem"}}>
-              <a href={github} target="_blank"  >
+              <a href={github} target="_blank" rel="noopener noreferrer" >
                 <img alt="github" src={githubIcon} width="24px" height="24px" />
               </a>
             </Grid>
           }
           {linkedin &&
             <Grid item xs={xs} style={{paddingTop:"0.5rem", paddingBottom: "0.5rem"}}>
-              <a href={linkedin} target="_blank" >
+              <a href={linkedin} target="_blank" rel="noopener noreferrer">
                 <img alt="linkedin" src={linkedinIcon} width="24px" height="24px" />
               </a>
             </Grid>
           }
           {website &&
             <Grid item xs={xs} style={{paddingTop:"0.5rem", paddingBottom: "0.5rem"}}>
-              <a href={website} target="_blank" >
+              <a href={website} target="_blank" rel="noopener noreferrer">
                 <img alt="website" src={websiteIcon} width="24px" height="24px"/>
               </a>
             </Grid>

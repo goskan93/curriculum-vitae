@@ -1,7 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
-import { TextInput } from "../../components/index";
-import { updatePersonalInfo } from "../../store/modules/formModule";
+import { TextInput, Expanded } from "../../components/index";
+import { updatePersonalInfo, updateSection, addElemSection } from "../../store/modules/formModule";
 
 //TODO: remove opacity from child
 function Form(props) {
@@ -10,7 +10,12 @@ function Form(props) {
   const onChangePersonalInfo = fieldName => value => {
     props.dispatch(updatePersonalInfo({field: fieldName, value: value }));
   };
-  const onChangeSectionInfo = fieldName => value => {
+  const onChangeSectionInfo = fieldName => (value, index, elem) => {
+    props.dispatch(updateSection({field: fieldName, value: value, index:index, element:elem }));
+  };
+
+  const onAddElementSection = fieldName => {
+    props.dispatch(addElemSection({field: fieldName }));
   };
 
   return (
@@ -21,6 +26,7 @@ function Form(props) {
       <TextInput label="GitHub" value={form.github} xs={6} onChange={onChangePersonalInfo('github')}/>
       <TextInput label="Linkedin" value={form.linkedin} xs={6} onChange={onChangePersonalInfo('linkedin')}/>
       <TextInput label="Website" value={form.website} xs={6} onChange={onChangePersonalInfo('website')}/>
+      <Expanded title="Add education" list={form.education} onChange={onChangeSectionInfo('education')} onAdd={() => onAddElementSection('education')}/>
     </>
   );
 }

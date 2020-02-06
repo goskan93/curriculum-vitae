@@ -74,7 +74,7 @@ TextInput.defaultProps = {
   variant: "outlined",
   fullWidth: true,
   multiline: false,
-  rows: 4,
+  rows: 2,
   value: "",
   margin: 'dense',
   xs: 12

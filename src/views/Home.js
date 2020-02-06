@@ -14,7 +14,7 @@ function Home(props) {
   })
 
   return (
-    <Grid container className="app">
+    <Grid container className="app" alignItems="flex-start">
       <Grid item xs={12} md={5}>
         <Grid container spacing={1}>
           <Form/>
