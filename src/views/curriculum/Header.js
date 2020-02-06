@@ -2,7 +2,6 @@ import React from "react";
 import { connect } from "react-redux";
 import { Grid, Typography } from "@material-ui/core";
 import {githubIcon, linkedinIcon, websiteIcon, foto} from "../../images/index"
-import Avatar from '@material-ui/core/Avatar';
 
 //TODO: remove opacity from child
 function Header(props) {
@@ -13,28 +12,28 @@ function Header(props) {
     <Grid container direction="row" justify="center" alignItems="center" style={{minHeight:"150px"}} >
       <Grid item xs={5} style={{margin:"auto"}}>
         <Grid container justify="center">
-          <Avatar alt="Foto" src={foto} style={{width:"120px", height:"120px"}}/>
+          <img alt="Foto" src={foto}  style={{width:"120px", height:"120px", borderRadius: "70%"}}/>
         </Grid>
       </Grid>
       <Grid item xs={1}> 
         <Grid container direction="column" justify="center" alignItems="center" alignContent="center" > 
           {github &&
             <Grid item xs={xs} style={{paddingTop:"0.5rem", paddingBottom: "0.5rem"}}>
-              <a href={github} target="_blank" rel="noopener noreferrer" >
+              <a href={github} target="_blank"  >
                 <img alt="github" src={githubIcon} width="24px" height="24px" />
               </a>
             </Grid>
           }
           {linkedin &&
             <Grid item xs={xs} style={{paddingTop:"0.5rem", paddingBottom: "0.5rem"}}>
-              <a href={linkedin} target="_blank" rel="noopener noreferrer" >
+              <a href={linkedin} target="_blank" >
                 <img alt="linkedin" src={linkedinIcon} width="24px" height="24px" />
               </a>
             </Grid>
           }
           {website &&
             <Grid item xs={xs} style={{paddingTop:"0.5rem", paddingBottom: "0.5rem"}}>
-              <a href={website} target="_blank" rel="noopener noreferrer" >
+              <a href={website} target="_blank" >
                 <img alt="website" src={websiteIcon} width="24px" height="24px"/>
               </a>
             </Grid>
