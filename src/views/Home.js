@@ -31,7 +31,7 @@ function Home() {
       </div>
       <Grid container className="app" alignItems="flex-start" alignContent="center">
         <Grid item xs={12} md={5}>
-          <Grid container spacing={1} direction='row' justify="space-around" alignItems="center">
+          <Grid container spacing={1} direction='row' justify="center" alignItems="center">
             <Form/>
             <Grid item xs={12} > 
               <Button

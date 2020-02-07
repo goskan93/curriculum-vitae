@@ -54,18 +54,18 @@ function Form(props) {
           )
         })}
       </Grid>
-      <Grid item xs={5}>
+      <Grid item xs={12}>
         <UploadButton 
           text="Photo"
           onUpload={onUploadPhoto('photo')}
         />
       </Grid>
-      <Grid item xs={7}>
+      {/* <Grid item xs={7}>
         <UploadButton //WHY DOESNT WORK?????
           text="Photo Background"
           onUpload={onUploadPhoto('photoBackground')}
         />
-      </Grid>
+      </Grid> */}
     </>
   );
 }
