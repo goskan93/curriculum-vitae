@@ -40,7 +40,8 @@ const initialState = {
   languages: languages,
   skills: skills,
   others: others,
-  imagePreviewUrl: null
+  photo: null,
+  photoBackground: null
 };
 
 const formReducer = handleActions(

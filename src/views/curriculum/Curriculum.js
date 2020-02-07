@@ -10,6 +10,7 @@ import {experienceIcon, educationIcon, languagesIcon, skillsIcon, othersIcon } f
 
 //TODO: remove opacity from child
 function Curriculum(props) {
+  const { form } = props
   const sections = [ 
     {
       name:"education",
@@ -45,7 +46,7 @@ function Curriculum(props) {
   return (
     <Grid container direction="column" >
       <Grid item xs={12}>
-        <BackgroundImage>
+        <BackgroundImage image={form.photoBackground}>
           <Header />
         </BackgroundImage>
       </Grid>

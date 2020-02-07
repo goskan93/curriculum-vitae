@@ -2,11 +2,12 @@ import React from "react";
 import {backgroundImage} from "../images/index";
 
 function BackgroundImage(props) {
+  const { image } = props
   return (
     <div
       className="background-image"
       style={{
-        backgroundImage: `url(${backgroundImage})`,
+        backgroundImage: `url(${image ? image : backgroundImage})`,
         backgroundPosition: "center",
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",

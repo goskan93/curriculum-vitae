@@ -1,10 +1,9 @@
 import React from "react";
 import { connect } from "react-redux";
-import { TextInput, Expanded } from "../../components/index";
+import { TextInput, Expanded, UploadButton } from "../../components/index";
 import { updatePersonalInfo, updateSection, addElemSection, deleteElemSection } from "../../store/modules/formModule";
 import Grid from "@material-ui/core/Grid";
-import Button from "@material-ui/core/Button";
-import CloudUploadIcon from "@material-ui/icons/CloudUpload";
+
 
 //TODO: remove opacity from child
 function Form(props) {
@@ -27,14 +26,15 @@ function Form(props) {
     props.dispatch(deleteElemSection({field: fieldName, index: index }));
   };
 
-  const onUploadPhoto = (e) => {
+  const onUploadPhoto = fieldName => e => {
     let reader = new FileReader();
     let file = e.target.files[0];
     reader.onloadend = () => {
-      props.dispatch(updatePersonalInfo({field: 'imagePreviewUrl', value: reader.result }));
+      props.dispatch(updatePersonalInfo({field: fieldName, value: reader.result }));
     }
     reader.readAsDataURL(file)
   };
+
 
   return (
     <>
@@ -52,22 +52,17 @@ function Form(props) {
           />
         )
       })}
-      <Grid item xs={12}>
-        <Grid container>
-          <input
-            accept="image/*"
-            style={{ display: "none" }}
-            id="raised-button-file"
-            type="file"
-            onChange={e => onUploadPhoto(e)}
-          />
-          <label htmlFor="raised-button-file">
-            <Button variant="contained" component="span">
-              <CloudUploadIcon />
-              <span style={{ marginLeft: 10 }}>Upload Photo</span>
-            </Button>
-          </label>
-        </Grid>
+      <Grid item xs={5}>
+        <UploadButton 
+          text="Photo"
+          onUpload={onUploadPhoto('photo')}
+        />
+      </Grid>
+      <Grid item xs={7}>
+        <UploadButton //WHY DOESNT WORK?????
+          text="Photo Background"
+          onUpload={onUploadPhoto('photoBackground')}
+        />
       </Grid>
     </>
   );
