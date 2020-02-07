@@ -8,6 +8,7 @@ import ListItemText from "@material-ui/core/ListItemText";
 import Divider from "@material-ui/core/Divider";
 import { Grid } from "@material-ui/core";
 import { dotIcon } from "../images/index";
+import { dictionary } from "../utils/index";
 
 const ListTitle = withStyles({
   root:{
@@ -73,7 +74,7 @@ function Section(props) {
   useStylesDivider();
   useStyleListText();
   useStylesList();
-  const { title, listInfo, iconImg, gridSize } = props;
+  const { title, listInfo, iconImg, gridSize, languageId } = props;
 
   return (
     <List>
@@ -81,7 +82,7 @@ function Section(props) {
         <ListItemIconHeader >
           <img src={iconImg} width="24px" height="24px" alt="icon"/>
         </ListItemIconHeader>
-        <ListTitle primary={title} />
+        <ListTitle primary={title.toUpperCase()} />
       </ListItem>
       <Divider variant="middle" />
       <Grid container>

@@ -17,5 +17,8 @@ import { darkblue } from "./colors";
 import { lightgreen } from "./colors";
 import { lightpink } from "./colors";
 
+import { languagesId } from "./dictionary";
+import { dictionary } from "./dictionary";
+
 export { languages, education, experience, name, phone, email, skills, github, linkedin, others, website,
-    darkpink, darkgreen, green, darkblue, lightgreen, lightpink};
+    darkpink, darkgreen, green, darkblue, lightgreen, lightpink, languagesId, dictionary};

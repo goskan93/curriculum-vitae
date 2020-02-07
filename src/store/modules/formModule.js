@@ -28,7 +28,7 @@ const { updatePersonalInfo, updateSection, addElemSection, deleteElemSection } =
 );
 
 const initialState = {
-  // language: 1,
+  languageId: 2,
   name: name,
   email: email,
   phone: phone,

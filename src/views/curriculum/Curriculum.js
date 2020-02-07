@@ -57,7 +57,8 @@ function Curriculum(props) {
               {props.form[item.name].length > 0 &&
                 <Grid item xs={item.itemSize} >
                   <Section 
-                    title={item.name.toUpperCase()} 
+                    languageId={form.languageId}
+                    title={item.name} 
                     listInfo={props.form[item.name]} 
                     iconImg={item.iconImg} 
                     {...item.otherProps}
