@@ -41,17 +41,19 @@ function Form(props) {
       {textInputs.map((item,index) => {
         return <TextInput label={item} value={form[item.toLowerCase()]} xs={6} onChange={onChangePersonalInfo(item.toLowerCase())} key={index}/>
       })}
-      {expandedInputs.map((item,index) => {
-        return (
-          <Expanded 
-            key={index}
-            title={`Add ${item}`} list={form[item]} 
-            onChange={onChangeSectionInfo(item)} 
-            onAdd={() => onAddElementSection(item)} 
-            onDelete={onDeleteElementSection(item) }
-          />
-        )
-      })}
+      <Grid item xs={12}>
+        {expandedInputs.map((item,index) => {
+          return (
+            <Expanded 
+              key={index}
+              title={`Add ${item}`} list={form[item]} 
+              onChange={onChangeSectionInfo(item)} 
+              onAdd={() => onAddElementSection(item)} 
+              onDelete={onDeleteElementSection(item) }
+            />
+          )
+        })}
+      </Grid>
       <Grid item xs={5}>
         <UploadButton 
           text="Photo"

@@ -10,4 +10,12 @@ import { linkedin } from "./defaultValues";
 import { others } from "./defaultValues";
 import { website } from "./defaultValues";
 
-export { languages, education, experience, name, phone, email, skills, github, linkedin, others, website};
+import { darkpink } from "./colors";
+import { darkgreen } from "./colors";
+import { green } from "./colors";
+import { darkblue } from "./colors";
+import { lightgreen } from "./colors";
+import { lightpink } from "./colors";
+
+export { languages, education, experience, name, phone, email, skills, github, linkedin, others, website,
+    darkpink, darkgreen, green, darkblue, lightgreen, lightpink};

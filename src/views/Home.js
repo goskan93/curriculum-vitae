@@ -19,7 +19,7 @@ function Home() {
   })
 
   return (
-    <div>
+    <>
       <div style={{flexGrow:1}}>
         <AppBar position="static">
           <Toolbar>
@@ -46,13 +46,13 @@ function Home() {
             </Grid >
           </Grid>
         </Grid>
-        <Grid item xs={12} md={7} >
+        <Grid item xs={12} md={7} style={{marginTop:"0.5rem"}}>
           <Paper elevation={5} style={{height:792, width:612, padding:'none', margin:'auto'}} ref={bodyRef}>
             <Curriculum/>
           </Paper>
         </Grid>
       </Grid>
-    </div>
+    </>
   );
 }
 export default Home;
