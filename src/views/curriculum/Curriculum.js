@@ -5,7 +5,7 @@ import { Grid } from "@material-ui/core";
 import { Header } from "../index";
 import { Section, BackgroundImage } from "../../components/index";
 
-import {experienceIcon, educationIcon, languagesIcon, skillsIcon, otherIcon } from "../../images/index";
+import {experienceIcon, educationIcon, languagesIcon, skillsIcon, othersIcon } from "../../images/index";
 
 
 //TODO: remove opacity from child
@@ -36,8 +36,8 @@ function Curriculum(props) {
       otherProps: {}
     },
     {
-      name:"other",
-      iconImg: otherIcon,
+      name:"others",
+      iconImg: othersIcon,
       itemSize: 12,
       otherProps: {}
     }

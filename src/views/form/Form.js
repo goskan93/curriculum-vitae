@@ -10,6 +10,9 @@ import CloudUploadIcon from "@material-ui/icons/CloudUpload";
 function Form(props) {
   const {form} = props
 
+  const textInputs = ['Name', 'Email', 'Phone', 'GitHub', 'Linkedin', 'Website' ]
+  const expandedInputs = ['education', 'experience', 'languages', 'skills', 'others' ]
+
   const onChangePersonalInfo = fieldName => value => {
     props.dispatch(updatePersonalInfo({field: fieldName, value: value }));
   };
@@ -31,46 +34,24 @@ function Form(props) {
       props.dispatch(updatePersonalInfo({field: 'imagePreviewUrl', value: reader.result }));
     }
     reader.readAsDataURL(file)
-  }
+  };
 
   return (
     <>
-      <TextInput label="Name" value={form.name} xs={6} onChange={onChangePersonalInfo('name')}/>
-      <TextInput label="Email" value={form.email} xs={6} onChange={onChangePersonalInfo('email')}/>
-      <TextInput label="Phone" value={form.phone} xs={6} onChange={onChangePersonalInfo('phone')}/>
-      <TextInput label="GitHub" value={form.github} xs={6} onChange={onChangePersonalInfo('github')}/>
-      <TextInput label="Linkedin" value={form.linkedin} xs={6} onChange={onChangePersonalInfo('linkedin')}/>
-      <TextInput label="Website" value={form.website} xs={6} onChange={onChangePersonalInfo('website')}/>
-      <Expanded 
-        title="Add education" list={form.education} 
-        onChange={onChangeSectionInfo('education')} 
-        onAdd={() => onAddElementSection('education')} 
-        onDelete={onDeleteElementSection('education') }
-      />
-      <Expanded 
-        title="Add experience" list={form.experience} 
-        onChange={onChangeSectionInfo('experience')} 
-        onAdd={() => onAddElementSection('experience')} 
-        onDelete={onDeleteElementSection('experience') }
-      />
-      <Expanded 
-        title="Add languages" list={form.languages} 
-        onChange={onChangeSectionInfo('languages')} 
-        onAdd={() => onAddElementSection('languages')} 
-        onDelete={onDeleteElementSection('languages') }
-      />
-      <Expanded 
-        title="Add skills" list={form.skills} 
-        onChange={onChangeSectionInfo('skills')} 
-        onAdd={() => onAddElementSection('skills')} 
-        onDelete={onDeleteElementSection('skills') }
-      />
-      <Expanded 
-        title="Add other" list={form.other} 
-        onChange={onChangeSectionInfo('other')} 
-        onAdd={() => onAddElementSection('other')} 
-        onDelete={onDeleteElementSection('other') }
-      />
+      {textInputs.map((item,index) => {
+        return <TextInput label={item} value={form[item.toLowerCase()]} xs={6} onChange={onChangePersonalInfo(item.toLowerCase())} key={index}/>
+      })}
+      {expandedInputs.map((item,index) => {
+        return (
+          <Expanded 
+            key={index}
+            title={`Add ${item}`} list={form[item]} 
+            onChange={onChangeSectionInfo(item)} 
+            onAdd={() => onAddElementSection(item)} 
+            onDelete={onDeleteElementSection(item) }
+          />
+        )
+      })}
       <Grid item xs={12}>
         <Grid container>
           <input
@@ -83,7 +64,7 @@ function Form(props) {
           <label htmlFor="raised-button-file">
             <Button variant="contained" component="span">
               <CloudUploadIcon />
-              <span style={{ marginLeft: 10 }}>Upload File</span>
+              <span style={{ marginLeft: 10 }}>Upload Photo</span>
             </Button>
           </label>
         </Grid>

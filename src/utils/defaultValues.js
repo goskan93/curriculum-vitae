@@ -81,7 +81,7 @@ export const skills = [
   }
 ];
 
-export const other = [
+export const others = [
   {
     primaryText: "10.2015 – 06.2016: President of Scientific Circle of Financial Engineering",
   },
