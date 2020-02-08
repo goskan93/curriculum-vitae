@@ -1,6 +1,6 @@
 {
   "name": "curriculum-vitae-app",
-  "homePage": "https://goskan93.github.io/curriculum-vitae/",
+  "homepage": "https://goskan93.github.io/curriculum-vitae/",
   "version": "0.1.0",
   "private": true,
   "main": "src/index.js",
