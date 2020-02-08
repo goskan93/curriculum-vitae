@@ -5,46 +5,52 @@ import { Grid } from "@material-ui/core";
 import { Header } from "../index";
 import { Section, BackgroundImage } from "../../components/index";
 
-import {experienceIcon, educationIcon, languagesIcon, skillsIcon, othersIcon } from "../../images/index";
-
+import {
+  experienceIcon,
+  educationIcon,
+  languagesIcon,
+  skillsIcon,
+  othersIcon
+} from "../../images/index";
 
 //TODO: remove opacity from child
 function Curriculum(props) {
-  const { form } = props
-  const sections = [ 
+  const { form } = props;
+  const sections = [
     {
-      name:"education",
+      name: "education",
       iconImg: educationIcon,
       itemSize: 12,
       otherProps: {}
-    },   
+    },
     {
-      name:"experience",
+      name: "experience",
       iconImg: experienceIcon,
       itemSize: 12,
       otherProps: {}
-    }, 
+    },
     {
-      name:"languages",
+      name: "languages",
       iconImg: languagesIcon,
-      itemSize: 5,
-      otherProps: {gridSize:6}
-    }, 
+      itemSize:
+        form.languages.length > 0 ? (form.skills.length > 0 ? 5 : 12) : 0,
+      otherProps: { gridSize: form.skills.length > 0 ? 6 : 3 }
+    },
     {
-      name:"skills",
+      name: "skills",
       iconImg: skillsIcon,
-      itemSize: 7,
+      itemSize: form.languages.length > 0 ? 7 : 12,
       otherProps: {}
     },
     {
-      name:"others",
+      name: "others",
       iconImg: othersIcon,
       itemSize: 12,
       otherProps: {}
     }
-  ]
+  ];
   return (
-    <Grid container direction="column" >
+    <Grid container direction="column">
       <Grid item xs={12}>
         <BackgroundImage image={form.photoBackground}>
           <Header />
@@ -52,20 +58,22 @@ function Curriculum(props) {
       </Grid>
       <Grid item xs={12}>
         <Grid container>
-          {sections.map((item, index) => {return (
-            <React.Fragment key={index}>
-              {props.form[item.name].length > 0 &&
-                <Grid item xs={item.itemSize} >
-                  <Section 
-                    title={item.name.toUpperCase()} 
-                    listInfo={props.form[item.name]} 
-                    iconImg={item.iconImg} 
-                    {...item.otherProps}
-                  />
-                </Grid>
-              }
-            </React.Fragment>
-          )})}
+          {sections.map((item, index) => {
+            return (
+              <React.Fragment key={index}>
+                {props.form[item.name].length > 0 && (
+                  <Grid item xs={item.itemSize}>
+                    <Section
+                      title={item.name.toUpperCase()}
+                      listInfo={props.form[item.name]}
+                      iconImg={item.iconImg}
+                      {...item.otherProps}
+                    />
+                  </Grid>
+                )}
+              </React.Fragment>
+            );
+          })}
         </Grid>
       </Grid>
     </Grid>
@@ -74,7 +82,7 @@ function Curriculum(props) {
 
 function mapStateToProps({ form }, _) {
   return {
-    form:form
+    form: form
   };
 }
 export default connect(mapStateToProps)(Curriculum);

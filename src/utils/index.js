@@ -17,5 +17,22 @@ import { darkblue } from "./colors";
 import { lightgreen } from "./colors";
 import { lightpink } from "./colors";
 
-export { languages, education, experience, name, phone, email, skills, github, linkedin, others, website,
-    darkpink, darkgreen, green, darkblue, lightgreen, lightpink};
+export {
+  languages,
+  education,
+  experience,
+  name,
+  phone,
+  email,
+  skills,
+  github,
+  linkedin,
+  others,
+  website,
+  darkpink,
+  darkgreen,
+  green,
+  darkblue,
+  lightgreen,
+  lightpink
+};

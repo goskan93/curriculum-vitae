@@ -1,55 +1,56 @@
-export const name = "Natalia Goska";
-export const email = "natalia.goska@gmail.com";
-export const phone = "+55 92566 48492";
-export const github = "https://github.com/goskan93";
-export const linkedin = "https://github.com/goskan93";
-export const website = "https://github.com/goskan93";
+export const name = "Awesome CV";
+export const email = "awesomeemail@email.com";
+export const phone = "+11 11111 1111";
+export const github = "https://github.com/";
+export const linkedin = "https://linkedin.com/";
+export const website = "https://heroku.com/";
 
 export const education = [
   {
     primaryText:
-      "03.2016 - 07.2017: Wroclaw University of Science and Technology (Poland)",
+      "01.2000 - 12.2005: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed",
     secondaryText:
-      "Mathematics for Industry and Commerce, Master of Science degree"
-  },
-  {
-    primaryText: "09.2016 - 01.2017: University of Coimbra (Portugal)",
-    secondaryText: "Applied Mathematics, Erasmus+ programme exchange student"
+      "do eiusmod tempor incididunt ut labore et dolore magna aliqua"
   },
   {
     primaryText:
-      "10.2012 - 01.2016: Wroclaw University of Science and Technology (Poland)",
-    secondaryText: "Applied Mathematics, Bachelor of Science degree"
+      "01.2000 - 12.2005:Et malesuada fames ac turpis. Enim ut sem viverra aliquet eget sit.",
+    secondaryText:
+      "Nunc sed blandit libero volutpat. Pharetra vel turpis nunc eget lorem dolor sed viverra ipsum.t"
+  },
+  {
+    primaryText:
+      "01.2000 - 12.2005: el facilisis volutpat est velit egestas dui. ",
+    secondaryText:
+      "Vel facilisis volutpat est velit. Aliquam ultrices sagittis orci a scelerisque. "
   }
 ];
 
 export const experience = [
   {
     primaryText:
-      "09.2018 - present: System Developer, Agrometrika, Vinhedo, Brazil",
-    secondaryText: `Develop the system for credit analysis for agrobusiness (ASP.NET MVC, C#, SQL, HTML, CSS,
-      JavaScript), preparing data visualizations and machine learning model used for business analysis,
-      (Power BI, Python), building mobile application integrated with the system (React Native, Expo,
-      Redux)`
+      "01.2000 - 12.2005: Condimentum mattis pellentesque id nibh tortor id",
+    secondaryText: `Sed augue lacus viverra vitae congue. Semper quis lectus nulla at volutpat diam ut venenatis.
+     In hendrerit gravida rutrum quisque non tellus orci ac auctor. Blandit volutpat maecenas volutpat blandit. 
+     Libero id faucibus nisl tincidunt. Posuere lorem ipsum dolor sit amet consectetur adipiscing elit duis.`
   },
   {
     primaryText:
-      "04.2017 – 12.2017: Junior SAP PO Consultant, AtosGDBC, Wroclaw, Poland",
-    secondaryText: `Doing the transports to other environments and preparing transport’s documentations, doing regression tests,
-      contact with the client, create the weekly and monthly report based on SNow, work with international team`
+      "01.2000 - 12.2005: Turpis egestas maecenas pharetra convallis posuere morbi leo.",
+    secondaryText: `Aliquam malesuada bibendum arcu vitae elementum curabitur vitae nunc sed.
+      Volutpat blandit aliquam etiam erat velit. Non pulvinar neque laoreet suspendisse interdum consectetur libero.`
   },
   {
     primaryText:
-      "06.2013 – 12.2014: Customer Service/Project Coordinator, Manus Foundation, Wroclaw, Poland",
-    secondaryText: `Help during the students projects such as Student Camp 2014, Action of selling insurances for students, Fam trip for Active Students 2014.
-      Contact with participants, settling the formal issues, prepare materials for participants, controlling the budget, 
-      taking care of the promotion in social media, maintaining the Foundation’s good name, keep contact with the student’s organizations`
+      "01.2000 - 12.2005: Nulla aliquet porttitor lacus luctus accumsan tortor posuere.",
+    secondaryText: `Sit amet consectetur adipiscing elit duis. Tortor at risus viverra adipiscing. 
+    Nunc sed id semper risus in hendrerit gravida. Enim blandit volutpat maecenas volutpat blandit aliquam etiam erat velit.`
   }
 ];
 
 export const languages = [
   {
-    primaryText: "Polish",
+    primaryText: "English",
     secondaryText: "native"
   },
   {
@@ -57,41 +58,45 @@ export const languages = [
     secondaryText: "advance"
   },
   {
-    primaryText: "Portuguese",
+    primaryText: "English",
     secondaryText: "intermediate"
   },
   {
-    primaryText: "German",
+    primaryText: "English",
     secondaryText: "basic"
   }
 ];
 
 export const skills = [
   {
-    primaryText: "ASP.NET MVC, C#, HTML, CSS, JavaScript",
+    primaryText: "Volutpat blandit aliquam etiam erat velit. "
   },
   {
-    primaryText: "Python, Power BI, VBA, MSSQL, Latex",
+    primaryText: "Volutpat blandit aliquam etiam erat velit. "
   },
   {
-    primaryText: "React.js, React Native, Redux, Expo",
+    primaryText: "Volutpat blandit aliquam etiam erat velit. "
   },
   {
-    primaryText: "GIT, Azure DevOps",
+    primaryText: "Volutpat blandit aliquam etiam erat velit. "
   }
 ];
 
 export const others = [
   {
-    primaryText: "10.2015 – 06.2016: President of Scientific Circle of Financial Engineering",
+    primaryText:
+      "Enim blandit volutpat maecenas volutpat blandit aliquam etiam erat velit. "
   },
   {
-    primaryText: "10.2015 – 06.2016: Main Coordinator of Polish Nationwide Mathematical Conference OMatKo!!!"
+    primaryText:
+      "Enim blandit volutpat maecenas volutpat blandit aliquam etiam erat velit. "
   },
   {
-    primaryText: "Rector’s scholarship in regard to high academic results (academic years 2012/2013 and 2015/2016)"
+    primaryText:
+      "Tristique et egestas quis ipsum suspendisse ultrices gravida dictum. Id eu nisl nunc mi ipsum faucibus vitae. Elementum sagittis vitae et leo duis ut diam quam. "
   },
   {
-    primaryText: "Distinction from the Rector of the University of Science and Technology in Wroclaw and from the Dean of the Faculty of Pure and Applied Mathematics in regard to the exceptional social and student’s activity (academic year 2016/2017)"
-  },
-]
+    primaryText:
+      "Tristique et egestas quis ipsum suspendisse ultrices gravida dictum. Id eu nisl nunc mi ipsum faucibus vitae. Elementum sagittis vitae et leo duis ut diam quam. "
+  }
+];

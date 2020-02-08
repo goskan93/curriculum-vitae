@@ -10,7 +10,18 @@ import skillsIcon from "./skillsIcon.png";
 import othersIcon from "./othersIcon.png";
 
 import backgroundImage from "./background.png";
-import foto from "./foto.jpg";
+import foto from "./foto.png";
 
-
-export { educationIcon, dotIcon, githubIcon, experienceIcon, languagesIcon, skillsIcon, backgroundImage, linkedinIcon, foto, websiteIcon, othersIcon }
+export {
+  educationIcon,
+  dotIcon,
+  githubIcon,
+  experienceIcon,
+  languagesIcon,
+  skillsIcon,
+  backgroundImage,
+  linkedinIcon,
+  foto,
+  websiteIcon,
+  othersIcon
+};
