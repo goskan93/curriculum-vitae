@@ -3,18 +3,18 @@ import Button from "@material-ui/core/Button";
 import CloudUploadIcon from "@material-ui/icons/CloudUpload";
 
 function UploadButton(props) {
-  const { onUpload, text } = props
+  const { onUpload, text, id } = props;
 
   return (
     <>
       <input
         accept="image/*"
         style={{ display: "none" }}
-        id="button-photo"
+        id={id}
         type="file"
         onChange={e => onUpload(e)}
       />
-      <label htmlFor="button-photo">
+      <label htmlFor={id}>
         <Button
           variant="contained"
           color="secondary"
@@ -26,7 +26,7 @@ function UploadButton(props) {
         </Button>
       </label>
     </>
-  )
+  );
 }
 
-  export default UploadButton;
+export default UploadButton;
