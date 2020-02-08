@@ -20,8 +20,13 @@ const formActionTypes = {
   DELETE_ELEM_SECTION: "DELETE_ELEM_SECTION"
 };
 
-const { updatePersonalInfo, updateSection, addElemSection, deleteElemSection } = createActions(
-  formActionTypes.UPDATE_PERSONAL_INFO, 
+const {
+  updatePersonalInfo,
+  updateSection,
+  addElemSection,
+  deleteElemSection
+} = createActions(
+  formActionTypes.UPDATE_PERSONAL_INFO,
   formActionTypes.UPDATE_SECTION,
   formActionTypes.ADD_ELEM_SECTION,
   formActionTypes.DELETE_ELEM_SECTION
@@ -52,26 +57,42 @@ const formReducer = handleActions(
     },
     [formActionTypes.UPDATE_SECTION]: (state, action) => {
       const { field, value, index, element } = action.payload;
-      const getSection = state[field]
-      const getElementSection = getSection[index]
-      const updateElementSection = {...getElementSection, [element]: value}
-      getSection[index] = updateElementSection
-      return { ...state, [field]: getSection };
+      const getSection = state[field];
+      const getElementSection = getSection[index];
+      const updateElementSection = { ...getElementSection, [element]: value };
+      const updateSection = [
+        ...getSection.slice(0, index),
+        updateElementSection,
+        ...getSection.slice(index + 1)
+      ];
+      return { ...state, [field]: updateSection };
     },
     [formActionTypes.ADD_ELEM_SECTION]: (state, action) => {
       const { field } = action.payload;
-      const getSection = state[field]
-      const updateSection = [...getSection, {primaryText:"", secondaryText: ""}]
+      const getSection = state[field];
+      const updateSection = [
+        ...getSection,
+        { primaryText: "", secondaryText: "" }
+      ];
       return { ...state, [field]: updateSection };
     },
     [formActionTypes.DELETE_ELEM_SECTION]: (state, action) => {
       const { field, index } = action.payload;
-      const getSection = state[field]
-      const updateSection = [...getSection.slice(0,index), ...getSection.slice(index+1)]
+      const getSection = state[field];
+      const updateSection = [
+        ...getSection.slice(0, index),
+        ...getSection.slice(index + 1)
+      ];
       return { ...state, [field]: updateSection };
     }
   },
   initialState
 );
 
-export { formReducer, updatePersonalInfo, updateSection, addElemSection, deleteElemSection };
+export {
+  formReducer,
+  updatePersonalInfo,
+  updateSection,
+  addElemSection,
+  deleteElemSection
+};
