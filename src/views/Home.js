@@ -15,7 +15,7 @@ function Home() {
   const createPdf = () =>
     savePDF(bodyRef.current, {
       paperSize: "Letter",
-      fileName: "test.pdf",
+      fileName: "CurriculumVitae.pdf",
       margin: 0
     });
 
