@@ -33,12 +33,12 @@ export const experience = [
   },
   {
     primaryText:
-      "04.2017 – 12.2017: Junior SAP PO Consultant, AtosGDBC, Wroclaw, Poland",
+      "04.2017 - 12.2017: Junior SAP PO Consultant, AtosGDBC, Wroclaw, Poland",
     secondaryText: `I was doing data migration with my team to other environment and preparing migration's documentation.`
   },
   {
     primaryText:
-      "06.2013 – 12.2014: Customer Service/Project Coordinator, Manus Foundation, Wroclaw, Poland",
+      "06.2013 - 12.2014: Customer Service/Project Coordinator, Manus Foundation, Wroclaw, Poland",
     secondaryText: `I was helping during the students projects such as Student Camp, action of selling insurances for students, fam trip for students.
       I was responsible for contact with participants, settling the formal issues and controlling the budget.`
   }
@@ -81,11 +81,11 @@ export const skills = [
 export const others = [
   {
     primaryText:
-      "10.2015 – 06.2016: President of Scientific Circle of Financial Engineering (volunteer)"
+      "10.2015 - 06.2016: President of Scientific Circle of Financial Engineering (volunteer)"
   },
   {
     primaryText:
-      "10.2015 – 06.2016: Main Coordinator of Nationwide Mathematical Conference OMatKo! (volunteer)"
+      "10.2015 - 06.2016: Main Coordinator of Nationwide Mathematical Conference OMatKo! (volunteer)"
   },
   {
     primaryText:
