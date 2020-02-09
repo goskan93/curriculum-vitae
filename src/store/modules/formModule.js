@@ -57,24 +57,19 @@ const formReducer = handleActions(
     },
     [formActionTypes.UPDATE_SECTION]: (state, action) => {
       const { field, value, index, element } = action.payload;
-      const getSection = state[field];
-      const getElementSection = getSection[index];
-      const updateElementSection = { ...getElementSection, [element]: value };
-      const updateSection = [
-        ...getSection.slice(0, index),
-        updateElementSection,
-        ...getSection.slice(index + 1)
-      ];
-      return { ...state, [field]: updateSection };
+      return {
+        ...state,
+        [field]: state[field].map((object, i) =>
+          i === index ? { ...object, [element]: value } : object
+        )
+      };
     },
     [formActionTypes.ADD_ELEM_SECTION]: (state, action) => {
       const { field } = action.payload;
-      const getSection = state[field];
-      const updateSection = [
-        ...getSection,
-        { primaryText: "", secondaryText: "" }
-      ];
-      return { ...state, [field]: updateSection };
+      return {
+        ...state,
+        [field]: [...state[field], { primaryText: "", secondaryText: "" }]
+      };
     },
     [formActionTypes.DELETE_ELEM_SECTION]: (state, action) => {
       const { field, index } = action.payload;
