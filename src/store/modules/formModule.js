@@ -10,7 +10,8 @@ import {
   github,
   linkedin,
   website,
-  others
+  others,
+  hobby
 } from "../../utils/index";
 
 const formActionTypes = {
@@ -45,6 +46,7 @@ const initialState = {
   languages: languages,
   skills: skills,
   others: others,
+  hobby: hobby,
   photo: null,
   photoBackground: null
 };

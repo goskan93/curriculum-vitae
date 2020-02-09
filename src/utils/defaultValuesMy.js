@@ -8,18 +8,18 @@ export const website = "https://github.com/goskan93";
 export const education = [
   {
     primaryText:
-      "03.2016 - 07.2017: Wroclaw University of Science and Technology (Poland)",
-    secondaryText:
-      "Mathematics for Industry and Commerce, Master of Science degree"
-  },
-  {
-    primaryText: "09.2016 - 01.2017: University of Coimbra (Portugal)",
-    secondaryText: "Applied Mathematics, Erasmus+ programme exchange student"
+      "03.2016 - 07.2017: Master of Science degree, Mathematics for Industry and Commerce",
+    secondaryText: "Wroclaw University of Science and Technology (Poland) "
   },
   {
     primaryText:
-      "10.2012 - 01.2016: Wroclaw University of Science and Technology (Poland)",
-    secondaryText: "Applied Mathematics, Bachelor of Science degree"
+      "09.2016 - 01.2017: Erasmus+ programme exchange student, Applied Mathematics",
+    secondaryText: "University of Coimbra (Portugal)"
+  },
+  {
+    primaryText:
+      "10.2012 - 01.2016: Bachelor of Science degree, Applied Mathematics",
+    secondaryText: "Wroclaw University of Science and Technology (Poland)"
   }
 ];
 
@@ -27,34 +27,31 @@ export const experience = [
   {
     primaryText:
       "09.2018 - present: System Developer, Agrometrika, Vinhedo, Brazil",
-    secondaryText: `Develop the system for credit analysis for agrobusiness (ASP.NET MVC, C#, SQL, HTML, CSS,
-      JavaScript), preparing data visualizations and machine learning model used for business analysis,
-      (Power BI, Python), building mobile application integrated with the system (React Native, Expo,
-      Redux)`
+    secondaryText: `I am developing new functionalities for the system for credit analysis for agrobusiness and
+      preparing data visualizations for business analysis.
+      I created mobile aplication integrated with the system.`
   },
   {
     primaryText:
       "04.2017 – 12.2017: Junior SAP PO Consultant, AtosGDBC, Wroclaw, Poland",
-    secondaryText: `Doing the transports to other environments and preparing transport’s documentations, doing regression tests,
-      contact with the client, create the weekly and monthly report based on SNow, work with international team`
+    secondaryText: `Going data migration with my team to other environment and preparing migration’s documentations.`
   },
   {
     primaryText:
       "06.2013 – 12.2014: Customer Service/Project Coordinator, Manus Foundation, Wroclaw, Poland",
-    secondaryText: `Help during the students projects such as Student Camp 2014, Action of selling insurances for students, Fam trip for Active Students 2014.
-      Contact with participants, settling the formal issues, prepare materials for participants, controlling the budget, 
-      taking care of the promotion in social media, maintaining the Foundation’s good name, keep contact with the student’s organizations`
+    secondaryText: `I was helping during the students projects such as Student Camp, action of selling insurances for students, fam trip for students.
+      I was responsible for contact with participants, settling the formal issues and controlling the budget.`
   }
 ];
 
 export const languages = [
   {
-    primaryText: "Polish",
-    secondaryText: "native"
-  },
-  {
     primaryText: "English",
     secondaryText: "advance"
+  },
+  {
+    primaryText: "Polish",
+    secondaryText: "native"
   },
   {
     primaryText: "Portuguese",
@@ -68,27 +65,27 @@ export const languages = [
 
 export const skills = [
   {
-    primaryText: "ASP.NET MVC, C#, HTML, CSS, JavaScript"
+    primaryText: "Web Developmnet: ASP.NET MVC, C#, HTML, CSS, JS, ReactJS"
   },
   {
-    primaryText: "Python, Power BI, VBA, MSSQL, Latex"
+    primaryText: "Data Analytics: Python, Power BI, VBA, MSSQL, MS Excel"
   },
   {
-    primaryText: "React.js, React Native, Redux, Expo"
+    primaryText: "Mobile Development: React Native, Redux, Expo"
   },
   {
-    primaryText: "GIT, Azure DevOps"
+    primaryText: "Tools: GIT, Azure DevOps"
   }
 ];
 
 export const others = [
   {
     primaryText:
-      "10.2015 – 06.2016: President of Scientific Circle of Financial Engineering"
+      "10.2015 – 06.2016: President of Scientific Circle of Financial Engineering (volunteer)"
   },
   {
     primaryText:
-      "10.2015 – 06.2016: Main Coordinator of Polish Nationwide Mathematical Conference OMatKo!!!"
+      "10.2015 – 06.2016: Main Coordinator of Nationwide Mathematical Conference OMatKo! (volunteer)"
   },
   {
     primaryText:
@@ -96,6 +93,21 @@ export const others = [
   },
   {
     primaryText:
-      "Distinction from the Rector of the University of Science and Technology in Wroclaw and from the Dean of the Faculty of Pure and Applied Mathematics in regard to the exceptional social and student’s activity (academic year 2016/2017)"
+      "Distinction from the Rector and from the Dean of the Faculty of Pure and Applied Mathematics in regard to the exceptional social and student’s activity (academic year 2016/2017)"
+  }
+];
+
+export const hobby = [
+  {
+    primaryText: "travelling, learning new languages"
+  },
+  {
+    primaryText: "volunteering on musical concerts/festivals"
+  },
+  {
+    primaryText: "reading books, running instagram profile @_booksforchange "
+  },
+  {
+    primaryText: "dancing"
   }
 ];

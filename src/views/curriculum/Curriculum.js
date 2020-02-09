@@ -10,7 +10,8 @@ import {
   educationIcon,
   languagesIcon,
   skillsIcon,
-  othersIcon
+  othersIcon,
+  hobbyIcon
 } from "../../images/index";
 
 //TODO: remove opacity from child
@@ -33,13 +34,13 @@ function Curriculum(props) {
       name: "languages",
       iconImg: languagesIcon,
       itemSize:
-        form.languages.length > 0 ? (form.skills.length > 0 ? 5 : 12) : 0,
+        form.languages.length > 0 ? (form.skills.length > 0 ? 4 : 12) : 0,
       otherProps: { gridSize: form.skills.length > 0 ? 6 : 3 }
     },
     {
       name: "skills",
       iconImg: skillsIcon,
-      itemSize: form.languages.length > 0 ? 7 : 12,
+      itemSize: form.languages.length > 0 ? 8 : 12,
       otherProps: {}
     },
     {
@@ -47,6 +48,12 @@ function Curriculum(props) {
       iconImg: othersIcon,
       itemSize: 12,
       otherProps: {}
+    },
+    {
+      name: "hobby",
+      iconImg: hobbyIcon,
+      itemSize: 12,
+      otherProps: { gridSize: 6 }
     }
   ];
   return (

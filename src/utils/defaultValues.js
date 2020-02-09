@@ -100,3 +100,18 @@ export const others = [
       "Tristique et egestas quis ipsum suspendisse ultrices gravida dictum. Id eu nisl nunc mi ipsum faucibus vitae. Elementum sagittis vitae et leo duis ut diam quam. "
   }
 ];
+
+export const hobby = [
+  {
+    primaryText: "Nunc sed blandit libero volutpat."
+  },
+  {
+    primaryText: "Nunc sed blandit libero volutpat."
+  },
+  {
+    primaryText: "Nunc sed blandit libero volutpat."
+  },
+  {
+    primaryText: "Nunc sed blandit libero volutpat."
+  }
+];

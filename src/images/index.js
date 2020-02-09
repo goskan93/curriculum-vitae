@@ -8,6 +8,7 @@ import experienceIcon from "./experienceIcon.png";
 import languagesIcon from "./languagesIcon.png";
 import skillsIcon from "./skillsIcon.png";
 import othersIcon from "./othersIcon.png";
+import hobbyIcon from "./hobbyIcon.png";
 
 import backgroundImage from "./background.png";
 import foto from "./foto.png";
@@ -23,5 +24,6 @@ export {
   linkedinIcon,
   foto,
   websiteIcon,
-  othersIcon
+  othersIcon,
+  hobbyIcon
 };
