@@ -1,9 +1,9 @@
 export const name = "Natalia Goska";
 export const email = "natalia.goska@gmail.com";
-export const phone = "+55 92566 48492";
+export const phone = "+55 19 98450-6605";
 export const github = "https://github.com/goskan93";
-export const linkedin = "https://github.com/goskan93";
-export const website = "https://github.com/goskan93";
+export const linkedin = "https://www.linkedin.com/in/natalia-goska/";
+export const website = "https://goskan93.github.io/curriculum-vitae/";
 
 export const education = [
   {
@@ -34,7 +34,7 @@ export const experience = [
   {
     primaryText:
       "04.2017 – 12.2017: Junior SAP PO Consultant, AtosGDBC, Wroclaw, Poland",
-    secondaryText: `Going data migration with my team to other environment and preparing migration’s documentations.`
+    secondaryText: `I was doing data migration with my team to other environment and preparing migration's documentation.`
   },
   {
     primaryText:
@@ -93,7 +93,7 @@ export const others = [
   },
   {
     primaryText:
-      "Distinction from the Rector and from the Dean of the Faculty of Pure and Applied Mathematics in regard to the exceptional social and student’s activity (academic year 2016/2017)"
+      "Distinction from the Rector and the Dean of the Faculty of Mathematics in regard to the exceptional social and student’s activity (academic year 2016/2017)"
   }
 ];
 
@@ -105,7 +105,7 @@ export const hobby = [
     primaryText: "volunteering on musical concerts/festivals"
   },
   {
-    primaryText: "reading books, running instagram profile @_booksforchange "
+    primaryText: "reading books, running Instagram profile @_booksforchange "
   },
   {
     primaryText: "dancing"

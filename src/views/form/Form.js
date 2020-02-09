@@ -26,7 +26,8 @@ function Form(props) {
     "experience",
     "languages",
     "skills",
-    "others"
+    "others",
+    "hobby"
   ];
 
   const onChangePersonalInfo = fieldName => value => {
