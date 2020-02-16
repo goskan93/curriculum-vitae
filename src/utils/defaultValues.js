@@ -3,7 +3,7 @@ export const email = "awesomeemail@email.com";
 export const phone = "+11 11111 1111";
 export const github = "https://github.com/";
 export const linkedin = "https://linkedin.com/";
-export const website = "https://heroku.com/";
+export const website = "https://github.com/";
 
 export const education = [
   {
