@@ -70,6 +70,26 @@ function Home() {
           </Paper>
         </Grid>
       </Grid>
+      <div style={{ flexGrow: 1 }}>
+        <footer
+          style={{ padding: 10 }}
+          class="MuiPaper-root MuiAppBar-root MuiAppBar-positionStatic MuiAppBar-colorPrimary MuiPaper-elevation4"
+        >
+          <div align="center">
+            <a href="https://www.counter12.com">
+              <img
+                src="https://www.counter12.com/img-yZZdyz87W8A6ZzyA-3.gif"
+                border="0"
+                alt="conter12"
+              />
+            </a>
+            <script
+              type="text/javascript"
+              src="https://www.counter12.com/ad.js?id=yZZdyz87W8A6ZzyA"
+            ></script>
+          </div>
+        </footer>
+      </div>
     </>
   );
 }

@@ -68,7 +68,7 @@ export const skills = [
     primaryText: "Web Developmnet: ASP.NET MVC, C#, HTML, CSS, JS, ReactJS"
   },
   {
-    primaryText: "Data Analytics: Python, Power BI, VBA, MSSQL, MS Excel"
+    primaryText: "Data Analytics: Python, Power BI, MSSQL, MS Excel"
   },
   {
     primaryText: "Mobile Development: React Native, Redux, Expo"
